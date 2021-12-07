@@ -6,28 +6,37 @@ services:
     container_name: binance_trader
     working_dir: /app
     volumes:
-      - ./user.cfg:/app/user.cfg
-      - ./supported_coin_list:/app/supported_coin_list
       - ./data:/app/data
       - ./logs:/app/logs
       - ./config:/app/config
     command: python -m binance_trade_bot
     environment:
       - PYTHONUNBUFFERED=1
-
-  api:
-    image: tntwist-binance-trade-bot
-    container_name: binance_trader_api
-    working_dir: /app
-    volumes:
-      - ./user.cfg:/app/user.cfg
-      - ./data:/app/data
-      - ./logs:/app/logs
-    ports:
-      - 5123:5123
-    command: gunicorn binance_trade_bot.api_server:app -k eventlet -w 1 --threads 1 -b 0.0.0.0:5123
-    depends_on:
-      - crypto-trading
+      - API_KEY=34e0FhWWmTOLPK6B2g5oRx7lu7dYXcJyHsaQgYGAvjbUy8NiI7kNVSVrkWRDgJ89
+      - API_SECRET_KEY=sy5hZ5H0bSztUgEyNV7JdUhU7SdFDBcX9wSl7l7esFysqy7OfL8Gdr5KEsxinc44
+      - TLD=com
+      - BRIDGE_SYMBOL=USDT
+      - HOURS_TO_KEEP_SCOUTING_HISTORY=1
+      - SCOUT_MULTIPLIER=5
+      - SCOUT_SLEEP_TIME=5
+      - TRADE_FEE=auto
+      - CURRENT_COIN_SYMBOL=BTC
+      - STRATEGY=default
+      - ENABLE_PAPER_TRADING=false
+      - SELL_TIMEOUT=0
+      - BUY_TIMEOUT=0
+      - SELL_MAX_PRICE_CHANGE=0.005
+      - SELL_ORDER_TYPE=market
+      - BUY_ORDER_TYPE=limit
+      - BUY_MAX_PRICE_CHANGE=0.005
+      - PRICE_TYPE=orderbook
+      - ACCEPT_LOSSES=false
+      - AUTO_ADJUST_BNB_BALANCE=false
+      - AUTO_ADJUST_BNB_BALANCE_RATE=3
+      - ALLOW_COIN_MERGE=true
+      - USE_MARGIN=no
+      - SCOUT_MARGIN=0.8
+      - SUPPORTED_COIN_LIST=BTC LTC ETH DOGE SHIB
 
   sqlitebrowser:
     image: ghcr.io/linuxserver/sqlitebrowser
