@@ -1,11 +1,12 @@
 from datetime import datetime
-
 from binance_trade_bot import backtest
 
 if __name__ == "__main__":
+    start_time = "01-10-2021 00:00:00"
+    end_time = "30-10-2021 23:59:59"
     history = []
-    start_time = datetime(2021, 6, 1, 0, 0)
-    end_time = datetime(2021, 7, 1, 23, 59)
+    start_time = datetime.strptime(start_time, "%d-%m-%Y %H:%M:%S")
+    end_time = datetime.strptime(end_time, "%d-%m-%Y %H:%M:%S")
     print(f"BACKTEST from {start_time} to {end_time}")
     current_date = start_time.strftime("%d/%m/%Y")
     for manager in backtest(start_time, end_time):

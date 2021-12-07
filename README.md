@@ -1,7 +1,9 @@
+## Warning: This is an experimental fork and things may work differently than you'd expect
+[edeng23/binance-trade-bot](https://github.com/edeng23/binance-trade-bot) >> [idkravitz/binance-trade-bot](https://github.com/idkravitz/binance-trade-bot) >> [tntwist/binance-trade-bot](https://github.com/tntwist/binance-trade-bot) >> [lnxd/binance-trade-bot](https://github.com/lnxd/binance-trade-bot)
+
 # binance-trade-bot
 
 ![github](https://img.shields.io/github/workflow/status/edeng23/binance-trade-bot/binance-trade-bot)
-![docker](https://img.shields.io/docker/pulls/idkravitz/binance-trade-bot)
 
 > Automated cryptocurrency trading bot
 
@@ -32,7 +34,7 @@ The bot jumps between a configured set of coins on the condition that it does no
 
 ## Binance Setup
 
--   Create a [Binance account](https://accounts.binance.com/en/register?ref=DDA1SQA) (Includes my referral link, I'll be super grateful if you use it).
+-   Create a [Binance account](https://accounts.binance.com/en/register?ref=158612165) (Includes my referral link, I'll be super grateful if you use it).
 -   Enable Two-factor Authentication.
 -   Create a new API key and whitelist your IP for it.
 -   Get a cryptocurrency. If its symbol is not in the default list, add it.
@@ -199,16 +201,6 @@ method, [add a new strategy](binance_trade_bot/strategies/README.md).
 ## Related Projects
 
 Thanks to a group of talented developers, there is now a [Telegram bot for remotely managing this project](https://github.com/lorcalhost/BTB-manager-telegram).
-
-## Support the Project
-
-Fist of all, support the originator of this bot and buy him a coffee. ☕
-
-<a href="https://www.buymeacoffee.com/edeng" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
-
-If you like my adjustments and you want to support me I would appreciate to get a coffee too. 😜
-
-<a href="https://www.buymeacoffee.com/tntwist" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
 ## Join the Chat
 
