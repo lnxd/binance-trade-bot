@@ -38,15 +38,30 @@ services:
       - SCOUT_MARGIN=0.8
       - SUPPORTED_COIN_LIST=BTC LTC ETH DOGE SHIB
 
-  sqlitebrowser:
-    image: ghcr.io/linuxserver/sqlitebrowser
-    container_name: sqlitebrowser
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=Europe/Berlin
-    volumes:
-      - ./data/config:/config
-      - ./data:/data
-    ports:
-      - 3000:3000
+  # Appears to be used to host a local API service
+  # api:
+  #   image: tntwist-binance-trade-bot
+  #   container_name: binance_trader_api
+  #   working_dir: /app
+  #   volumes:
+  #     - ./data:/app/data
+  #     - ./logs:/app/logs
+  #   ports:
+  #     - 5123:5123
+  #   command: gunicorn binance_trade_bot.api_server:app -k eventlet -w 1 --threads 1 -b 0.0.0.0:5123
+  #   depends_on:
+  #     - crypto-trading
+
+  # Used to browse databases created / used. Possible security risk leaving this open on a network. 
+  # sqlitebrowser:
+  #   image: ghcr.io/linuxserver/sqlitebrowser
+  #   container_name: sqlitebrowser
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=Europe/Berlin
+  #   volumes:
+  #     - ./data/config:/config
+  #     - ./data:/data
+  #   ports:
+  #     - 3000:3000
