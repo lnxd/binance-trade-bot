@@ -5,7 +5,7 @@ import binance.client
 
 from .models import Coin
 
-CFG_FL_NAME = "user.cfg"
+CFG_FL_NAME = "./config/user.cfg"
 USER_CFG_SECTION = "binance_user_config"
 
 
@@ -39,7 +39,9 @@ class Config:  # pylint: disable=too-few-public-methods,too-many-instance-attrib
             "accept_losses": "false",
             "auto_adjust_bnb_balance": "false",
             "auto_adjust_bnb_balance_rate": "3",
-            "allow_coin_merge": "true"
+            "allow_coin_merge": "true",
+            "backtest_start": "2021-10-01",
+            "backtest_end": "2021-10-30"
         }
 
         if not os.path.exists(CFG_FL_NAME):
