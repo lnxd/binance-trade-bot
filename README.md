@@ -1,7 +1,9 @@
+## Warning: This is an experimental fork and things may work differently than you'd expect
+[edeng23/binance-trade-bot](https://github.com/edeng23/binance-trade-bot) >> [idkravitz/binance-trade-bot](https://github.com/idkravitz/binance-trade-bot) >> [tntwist/binance-trade-bot](https://github.com/tntwist/binance-trade-bot) >> [lnxd/binance-trade-bot](https://github.com/lnxd/binance-trade-bot)
+
 # binance-trade-bot
 
 ![github](https://img.shields.io/github/workflow/status/edeng23/binance-trade-bot/binance-trade-bot)
-![docker](https://img.shields.io/docker/pulls/idkravitz/binance-trade-bot)
 
 > Automated cryptocurrency trading bot
 
